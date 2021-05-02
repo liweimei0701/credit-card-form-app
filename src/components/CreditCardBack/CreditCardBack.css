@@ -11,7 +11,7 @@
   /* background-color: #000; */
   background: linear-gradient(25deg, #308c67, #a3f2cf);
   border-radius: 8px;
-  box-shadow:21px 14px 30px 9px rgb(0 0 0 / 20%);
+  box-shadow:9px 14px 30px 9px rgb(0 0 0 / 20%);
   /* display: none; */
 }
 .stripe {

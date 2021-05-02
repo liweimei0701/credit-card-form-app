@@ -30,10 +30,13 @@ const FormInfo = (props) => {
     e.preventDefault();
     let formData = new FormData();
     formData = {...formValues} ;
-    const res = axios.put('https://rq1twnw4zf.execute-api.ap-southeast-2.amazonaws.com/items',{
-      formData
+    const res = axios.put('/api',formData);
+    res.then(res=>{
+      console.log(res.data);
+      if (res.status === 200) {
+        alert(`${res.data} , Your card submit successfully!`)
+      }
     })
-    console.log(res);
   }
   return (
     <form action="" className='form' onSubmit={handleSubmit}>
