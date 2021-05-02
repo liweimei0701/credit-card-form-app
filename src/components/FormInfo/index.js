@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import {message} from 'antd';
 import {formatCardNumber,formatCVV} from '../../utils/format'
 import expirationData from '../../assests/expirationData'
 import './formInfo.css'
@@ -34,7 +35,7 @@ const FormInfo = (props) => {
     res.then(res=>{
       console.log(res.data);
       if (res.status === 200) {
-        alert(`${res.data} , Your card submit successfully!`)
+        message.info(`${res.data} , Your card submit successfully!`)
       }
     })
   }
