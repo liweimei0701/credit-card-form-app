@@ -33,7 +33,7 @@ const FormInfo = (props) => {
     formData = {...formValues} ;
     const res = axios.put('/api',formData);
     res.then(res=>{
-      console.log(res.data);
+      // console.log(res.data);
       if (res.status === 200) {
         message.info(`${res.data} , Your card submit successfully!`)
       }
