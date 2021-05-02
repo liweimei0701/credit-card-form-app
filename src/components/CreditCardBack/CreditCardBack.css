@@ -1,0 +1,49 @@
+.creditCardBack{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 60%;
+  max-width: 420px;
+  min-width: 360px;
+  height: 250px;
+  /* padding: 25px; */
+  /* background-color: #000; */
+  background: linear-gradient(25deg, #308c67, #a3f2cf);
+  border-radius: 8px;
+  box-shadow:21px 14px 30px 9px rgb(0 0 0 / 20%);
+  /* display: none; */
+}
+.stripe {
+  width: 100%;
+  height: 40px;
+  margin-top: 50px;
+  background-color: #ccc;
+}
+.cvvShow { 
+  margin: 5px auto;
+  width: 95%;
+  height: 50px;
+  /* padding: 25px; */
+  text-align: right;
+}
+.cvvNumber {
+  width: 100%;
+  height: 40px;
+  padding: 5px;
+  background-color: #fff;
+  font-size: 20px;
+  color: #000;
+  border-radius: 5px;
+}
+.cardTypeBack {
+  position: absolute;
+  bottom: 20px;
+  right: 25px;
+  /* width: 100px; */
+  height: 40px;
+}
+.cardTypeBack img {
+  height: 100%;
+  max-width: 100px
+}

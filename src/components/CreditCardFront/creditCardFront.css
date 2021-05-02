@@ -1,0 +1,81 @@
+.creditCardFront{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 60%;
+  max-width: 420px;
+  min-width: 360px;
+  height: 250px;
+  /* padding: 25px; */
+  /* background-color: #000; */
+  border-radius: 8px;
+  box-shadow:21px 14px 30px 9px rgb(0 0 0 / 20%);
+}
+.chip {
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  width: 50px;
+  height: 38px;
+}
+.chip img {
+  width: 100%;
+}
+.cardTypeFront {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  /* width: 150px; */
+  height: 40px;
+}
+.cardTypeFront img {
+  height: 100%;
+  max-width: 100px
+}
+.cardNumber {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  width: 90%;
+  height: 40px;
+  /* padding: 5px; */
+  line-height: 40px;
+  padding-left: 5px;
+  /* color: #fff; */
+  font-size: 25px;
+  font-weight: 500;
+  /* border: 1px solid #ccc; */
+}
+.cardHolder {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+  width: 60%;
+  height: 50px;
+  padding-left: 5px;
+  border: 1px solid #ccc;
+}
+.cardHolder p,
+.expirDate p {
+  font-size: 12px;
+  /* color: #eee; */
+}
+.holderName,
+.expirDateBox {
+  overflow: hidden;
+  font-size: 16px;
+  /* color: #fff; */
+  font-weight: 500;
+}
+.expirDate {
+  position: absolute;
+  bottom: 15px;
+  left: 68%;
+  width: 30%;
+  height: 50px;
+  /* width: 100px;
+  height: 50px; */
+  /* border: 1px solid #ccc; */
+}
