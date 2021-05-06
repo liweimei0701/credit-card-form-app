@@ -9,8 +9,8 @@ const App = () => {
   const initialFormValues = {
     cardName:'',
     cardNumber:'',
-    expiresMon:'MM',
-    expiresYear:'YY',
+    expiresMon:'',
+    expiresYear:'',
     cvv:''
   }
   const [formValues,setFormValues] = useState(initialFormValues)

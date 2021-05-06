@@ -32,7 +32,7 @@ const CreditCardFront = (props) => {
       <div className="expirDate">
         <p>Expires</p>
         <div className="expirDateBox">
-        <span>{expiresMon}</span><span>/</span><span>{expiresYear}</span>
+        <span>{expiresMon?expiresMon:'MM'}</span><span>/</span><span>{expiresYear?expiresYear:'YY'}</span>
       </div>
         </div>
     </div>

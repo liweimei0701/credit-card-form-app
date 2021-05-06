@@ -31,14 +31,21 @@ const FormInfo = (props) => {
     e.preventDefault();
     let formData = new FormData();
     formData = {...formValues} ;
-    const res = axios.put('/api',formData);
-    res.then(res=>{
+    const {expiresMon,expiresYear,cardNumber} = formData;
+    if(cardNumber.length !== 19){
+      message.info('please enter your 16 digits card numbers!')
+    }else if(!expiresMon || !expiresYear) {
+      message.info('please select the expireDate!')
+    }else {
+      const res = axios.put('/api',formData);
+      res.then(res=>{
       // console.log(res.data);
       if (res.status === 200) {
         message.info(`${res.data} , Your card submit successfully!`)
       }
     })
   }
+    }
   return (
     <form action="" className='form' onSubmit={handleSubmit}>
       {/* cardNumber group */}
@@ -50,6 +57,7 @@ const FormInfo = (props) => {
         className='cardnumber'
         value={formValues.cardNumber} 
         name='cardNumber'
+        length='19'
         required
         onChange={handleChange}
         onFocus={handleFocus}/>        
@@ -73,7 +81,8 @@ const FormInfo = (props) => {
         <select
         className="expirationMon" 
         value={formValues.expiresMon} 
-        name='expiresMon'  
+        name='expiresMon'
+        required  
         onChange={handleChange}
         onFocus={handleFocus}>
           <option value="Month" disabled>Month</option>
@@ -84,7 +93,8 @@ const FormInfo = (props) => {
       <select
       className="expirationYear" 
       value={formValues.expiresYear} 
-      name='expiresYear' 
+      name='expiresYear'
+      required 
       onChange={handleChange}
       onFocus={handleFocus}>
         <option value="Year" disabled>Year</option>
