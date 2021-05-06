@@ -31,12 +31,14 @@ const FormInfo = (props) => {
     e.preventDefault();
     let formData = new FormData();
     formData = {...formValues} ;
-    const {expiresMon,expiresYear,cardNumber} = formData;
+    const {expiresMon,expiresYear,cardNumber,cvv} = formData;
     if(cardNumber.length !== 19){
       message.info('please enter your 16 digits card numbers!')
     }else if(!expiresMon || !expiresYear) {
       message.info('please select the expireDate!')
-    }else {
+    }else if(cvv.length < 3) {
+      message.info('please enter your cvv as 3 or 4 digits!')
+    } else {
       const res = axios.put('/api',formData);
       res.then(res=>{
       // console.log(res.data);
